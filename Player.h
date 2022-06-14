@@ -4,8 +4,8 @@ using namespace sf;
 class Player
 {
 private:
-	const float m_StartSpeed = 200;
-	const float m_StartHealth = 100;
+	const float Start_Speed = 200;
+	const float Start_Health = 100;
 	//where is the player
 	Vector2f m_Position;
 	//Player Sprite
@@ -24,5 +24,15 @@ private:
 	bool downPressed;
 	bool leftPressed;
 	bool rightPressed;
+	//Player current health
+	int m_Health;
+	int m_MaxHealth;
+	//when was the player last hit
+	Time m_LastHit;
+	float m_Speed;
 public:
+	Player();
+	void Spawn(IntRect arena, Vector2f resolution, int tileSize);
+	//Call this at the end of every game
+	void 
 };
