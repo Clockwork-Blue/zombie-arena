@@ -34,5 +34,37 @@ public:
 	Player();
 	void Spawn(IntRect arena, Vector2f resolution, int tileSize);
 	//Call this at the end of every game
-	void 
+	void resetPlayerStats();
+	//handle the player getting hit by a zombie
+	bool hit(Time timehit);
+	//Hol long ago was the player last hit
+	Time getLastHitTime();
+	//Where is the player
+	FloatRect getPosition();
+	// where is the center of the player
+	Vector2f getCenter();
+	//what angle is the player facing
+	float getRotation();
+	//send a copy of the sprite to the main function
+	Sprite getSprite();
+	//the players four directional movements
+	void moveUp();
+	void moveDown();
+	void moveLeft();
+	void moveRight();
+	//stop the player's four movements
+	void stopUp();
+	void stopDown();
+	void stopLeft();
+	void stopRight();
+	//call function once every frame
+	void update(float elapsedTime, Vector2i mousePosition);
+	//give the player a speed boost
+	void upgradeSpeed();
+	//increase the players max health
+	void upgradeHealth();
+	// Increase amount of health the player has up to the max
+	void increaseHealthLevel(int amount);
+	// How much health does the player currently have?
+	int getHealth();
 };
