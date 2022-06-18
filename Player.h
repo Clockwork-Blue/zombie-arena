@@ -20,10 +20,10 @@ private:
 	//How big is each tile of the arena
 	int m_TileSize;
 	// which directions the player is moving in
-	bool upPressed;
-	bool downPressed;
-	bool leftPressed;
-	bool rightPressed;
+	bool m_UpPressed;
+	bool m_DownPressed;
+	bool m_LeftPressed;
+	bool m_RightPressed;
 	//Player current health
 	int m_Health;
 	int m_MaxHealth;
@@ -37,7 +37,7 @@ public:
 	void resetPlayerStats();
 	//handle the player getting hit by a zombie
 	bool hit(Time timehit);
-	//Hol long ago was the player last hit
+	//How long ago was the player last hit
 	Time getLastHitTime();
 	//Where is the player
 	FloatRect getPosition();
