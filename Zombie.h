@@ -27,5 +27,11 @@ private:
 	float m_Speed;
 	//is this zombie alive
 	bool m_Alive;
-	//Public stuff, write when sober
+public:
+	bool hit();
+	bool alive();
+	void spawn(float startX, float startY, int type, int seed);
+	FloatRect getPosition();
+	Sprite getSprite();
+	void update(float elapsedTime, Vector2f playerPosition);
 };
